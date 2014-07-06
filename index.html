@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>to do</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<input id="inputfield" type="text" autofocus placeholder="potatoes">
+			<button id="delete">Delete completed</button>
+			<ul id="content">
+				<!-- tasks to be appended here -->
+			</ul>
+
+			<a href="http://vanilla-js.com/"><img alt="VanillaJS" src="vanillajs.png"></a>
+		</div>
+
+		<!-- Safari and others doesnt like <template> :(
+		<template id="task-template">
+			<li class="task">
+				<input type="checkbox"> <span class="text"></span>
+			</li>
+		</template>
+		-->
+		<script type="text/html" id="task-template">
+			<li class="task">
+				<input type="checkbox"> <span class="text"></span>
+			</li>
+		</script>
+	</body>
+</html>

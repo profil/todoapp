@@ -1,0 +1,41 @@
+body {
+	font-size: 3vw;
+	font-family: Helvetica, arial, freesans, clear, sans-serif;
+}
+#wrapper {
+	margin: 20px auto;
+}
+ul#content {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 20px;
+	margin: 10px;
+}
+li.task {
+	color: #333;
+	list-style-type: none;
+}
+input[type="text"] {
+	font-size: 3vw;
+	width: 95%;
+	margin: 2.5%;
+	box-sizing: border-box;
+}
+li.task input:checked + span {
+	text-decoration: line-through;
+}
+[draggable] {
+	cursor: move;
+}
+
+.over {
+	background-color: #ccc;
+}
+.move {
+	opacity: 0.4;
+}
+
+@media screen and (max-width: 900px) {
+	body { font-size: 6vw; }
+	input[type="text"] { font-size: 8vw; }
+}

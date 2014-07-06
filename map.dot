@@ -1,0 +1,33 @@
+digraph {
+	label = "A solid line means direct function invokation.\lA dashed line is some kind of event.\l";
+
+
+	user[label = "User" shape="box" style=rounded];
+	list[label = "List View" shape="box" style=rounded];
+	input[label = "Input View" shape="box" style=rounded];
+	presenter[label = "Presenter" shape="box" style=rounded];
+	model[label = "Model" shape="box" style=rounded];
+	store[label = "Store" shape="box" style=rounded];
+
+
+	list -> user;
+	input -> user;
+
+	presenter -> list;
+	presenter -> input;
+
+	presenter -> model;
+
+	model -> store;
+
+
+
+	//edge [constraint = false];
+	user -> list [label = "user event" style = "dashed"];
+	user -> input [label = "user event" style = "dashed"];
+
+	list -> presenter [label = "event bus" style = "dashed"];
+	input -> presenter [label = "event bus" style = "dashed"];
+
+	model -> presenter [label = "event bus" style = "dashed"];
+}
